@@ -1,0 +1,18 @@
+# Utiliser une image de base légère
+FROM alpine:latest
+
+# Définir le répertoire de travail
+WORKDIR /app
+
+# Installer bc
+RUN apk add --no-cache bc
+
+# Copier le binaire pré-compilé et le script shell dans le conteneur
+COPY app .
+COPY pi.sh .
+
+# Exposer le port sur lequel l'application s'exécute
+EXPOSE 8080
+
+# Commande pour exécuter l'application
+CMD ["./app"]
