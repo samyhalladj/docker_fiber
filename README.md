@@ -29,7 +29,7 @@ projet/
 
 ### 1. Clone the Repository
 
-    ```sh
+
     git clone https://github.com/yourusername/your-repo-name.git
     cd your-repo-name
 
